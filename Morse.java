@@ -52,5 +52,6 @@ public class Morse {
         System.out.println(arvore.buscar(".-"));
         System.out.println(arvore.buscar("-..."));
         System.out.println(arvore.buscar(".."));
+        System.out.println(arvore.buscar("... --- ..."));
     }
 }

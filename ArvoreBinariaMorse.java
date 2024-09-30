@@ -43,7 +43,7 @@ public class ArvoreBinariaMorse {
         no_atual.setCaractere(caractere);
     }
     
-    public Character buscar(String codigo_morse){
+    public Character buscarChar(String codigo_morse){
         
         Nodo no_atual = raiz;
         
@@ -60,5 +60,24 @@ public class ArvoreBinariaMorse {
            
         }
         return no_atual.getCaractere();
+    }
+    
+    public String buscar(String codigo_morse){
+        
+        String[] letra = codigo_morse.split(" ");
+        StringBuilder resultado = new StringBuilder();
+        
+        for (String l : letra){
+            Character character = buscarChar(l);
+            if(character != null){
+                resultado.append(character);
+            }
+            else{
+                return null;
+            }
+        }
+        
+        return resultado.toString();
+        
     }
 }
