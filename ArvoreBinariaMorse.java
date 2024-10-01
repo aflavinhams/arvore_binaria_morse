@@ -1,9 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.morse;
-
 public class ArvoreBinariaMorse {
     
     private Nodo raiz;
@@ -27,16 +21,16 @@ public class ArvoreBinariaMorse {
         
         for(char simbolo : codigo_morse.toCharArray()){
             if(simbolo == '.'){
-                if(no_atual.getFilho_esquerdo() == null){
-                    no_atual.setFilho_esquerdo(new Nodo());
+                if(no_atual.getFilhoEsquerdo() == null){
+                    no_atual.setFilhoEsquerdo(new Nodo());
                 }
-                no_atual = no_atual.getFilho_esquerdo();
+                no_atual = no_atual.getFilhoEsquerdo();
             }
             else if(simbolo == '-'){
-                if(no_atual.getFilho_direito() == null){
-                    no_atual.setFilho_direito(new Nodo());
+                if(no_atual.getFilhoDireito() == null){
+                    no_atual.setFilhoDireito(new Nodo());
                 }
-                no_atual = no_atual.getFilho_direito();
+                no_atual = no_atual.getFilhoDireito();
             }
            
         }
@@ -49,10 +43,10 @@ public class ArvoreBinariaMorse {
         
         for(char simbolo : codigo_morse.toCharArray()){
             if(simbolo == '.'){
-                no_atual = no_atual.getFilho_esquerdo();
+                no_atual = no_atual.getFilhoEsquerdo();
             }
             else if (simbolo == '-'){
-                no_atual = no_atual.getFilho_direito();
+                no_atual = no_atual.getFilhoDireito();
             }
             if (no_atual == null){
                 return null;
@@ -80,4 +74,22 @@ public class ArvoreBinariaMorse {
         return resultado.toString();
         
     }
+    public void exibirArvore() {
+        exibirRecursivamente(raiz, "");
+    }
+    
+    private void exibirRecursivamente(Nodo no, String codigoMorse) {
+        if (no == null) {
+            return;
+        }
+
+        if (no.getCaractere() != null) {
+            System.out.println(codigoMorse + ": " + no.getCaractere());
+        }
+
+        exibirRecursivamente(no.getFilhoEsquerdo(), codigoMorse + ".");
+        exibirRecursivamente(no.getFilhoDireito(), codigoMorse + "-");
+    }
+
+    
 }
