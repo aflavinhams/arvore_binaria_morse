@@ -1,37 +1,41 @@
-
-package com.mycompany.morse;
-
 public class Nodo {
     
-    private char caractere;
-    private Nodo filho_esquerdo;
-    private Nodo filho_direito;
+    private Character caractere;  
+    private Nodo filhoEsquerdo;   
+    private Nodo filhoDireito;    
+    
+    public Nodo() {
+        this.caractere = null;
+        this.filhoEsquerdo = null;
+        this.filhoDireito = null;
+    }
 
-    public char getCaractere() {
+    public Character getCaractere() {
         return caractere;
     }
 
-    public void setCaractere(char caractere) {
+   
+    public void setCaractere(Character caractere) {
         this.caractere = caractere;
     }
 
-    public Nodo getFilho_esquerdo() {
-        return filho_esquerdo;
+    
+    public Nodo getFilhoEsquerdo() {
+        return filhoEsquerdo;
     }
 
-    public void setFilho_esquerdo(Nodo filho_esquerdo) {
-        this.filho_esquerdo = filho_esquerdo;
+    
+    public void setFilhoEsquerdo(Nodo filhoEsquerdo) {
+        this.filhoEsquerdo = filhoEsquerdo;
     }
 
-    public Nodo getFilho_direito() {
-        return filho_direito;
+    
+    public Nodo getFilhoDireito() {
+        return filhoDireito;
     }
 
-    public void setFilho_direito(Nodo filho_direito) {
-        this.filho_direito = filho_direito;
+    
+    public void setFilhoDireito(Nodo filhoDireito) {
+        this.filhoDireito = filhoDireito;
     }
-    
-    
-    
-    
 }
