@@ -1,16 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
+import java.util.Scanner;
 
-package com.mycompany.morse;
-
-/**
- *
- * @author apaul
- */
 public class Morse {
 
     public static void main(String[] args) {
+       
         ArvoreBinariaMorse arvore = new ArvoreBinariaMorse();
         arvore.inserir(".-", 'A');
         arvore.inserir("-...", 'B');
@@ -48,10 +41,42 @@ public class Morse {
         arvore.inserir("---..", '8');
         arvore.inserir("----.", '9');
         arvore.inserir("-----", '0');
-        
-        System.out.println(arvore.buscar(".-"));
-        System.out.println(arvore.buscar("-..."));
-        System.out.println(arvore.buscar(".."));
-        System.out.println(arvore.buscar("... --- ..."));
+
+        Scanner scanner = new Scanner(System.in);
+        boolean sair = false;
+
+        while (!sair) {
+            System.out.println("\n--- Menu ---");
+            System.out.println("1. Buscar Código Morse");
+            System.out.println("2. Exibir Árvore Morse");
+            System.out.println("3. Sair");
+            System.out.println("Escolha uma opção: ");
+            int opcao = scanner.nextInt();
+            scanner.nextLine(); 
+
+            switch (opcao) {
+                case 1:
+                    System.out.println("Digite o código Morse (use espaços para separar letras): ");
+                    String codigoMorse = scanner.nextLine();
+                    String resultado = arvore.buscar(codigoMorse);
+                    if (resultado != null) {
+                        System.out.println("Resultado: " + resultado);
+                    } else {
+                        System.out.println("Código Morse inválido.");
+                    }
+                    break;
+                case 2:
+                    System.out.println("Exibindo Árvore Morse:");
+                    arvore.exibirArvore();
+                    break;
+                case 3:
+                    sair = true;
+                    System.out.println("Saindo...");
+                    break;
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+            }
+        }
+        scanner.close();
     }
 }
