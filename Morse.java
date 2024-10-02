@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class Morse {
 
     public static void main(String[] args) {
-       
+
+        // inicializando a arvore e inserindo os caracteres
         ArvoreBinariaMorse arvore = new ArvoreBinariaMorse();
         arvore.inserir(".-", 'A');
         arvore.inserir("-...", 'B');
@@ -56,6 +57,7 @@ public class Morse {
 
             switch (opcao) {
                 case 1:
+                    // caso escolha buscar o codigo
                     System.out.println("Digite o código Morse (use espaços para separar letras): ");
                     String codigoMorse = scanner.nextLine();
                     String resultado = arvore.buscar(codigoMorse);
@@ -66,10 +68,12 @@ public class Morse {
                     }
                     break;
                 case 2:
+                    // caso escolha exibir a arvore
                     System.out.println("Exibindo Árvore Morse:");
                     arvore.exibirArvore();
                     break;
                 case 3:
+                    // caso escolha sair
                     sair = true;
                     System.out.println("Saindo...");
                     break;
