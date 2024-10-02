@@ -6,14 +6,14 @@ A árvore é montada usando os símbolos **"."** (ponto) e **"-"** (traço), ond
 
 ## Estrutura do Projeto
 
-1. **ArvoreBinariaMorse**: criação da árvore, inserção e busca de caracteres em codigo morse.
+1. **ArvoreBinariaMorse**: criação da árvore, inserção, exibição e busca de caracteres em codigo morse.
 2. **Nodo**: nó da árvore, contendo um caractere e referências para os filhos esquerdo e direito.
 3. **Morse**: menu principal, onde o usuário pode interagir com a árvore.
 
 ## Como Usar
 ### Menu
 Ao executar o programa, o usuário tem as seguintes opções:
-- **1. Buscar Código Morse**: O usuário digita um código Morse (usando "." e "-") e recebe o caractere correspondente. Para buscar várias letras, separe os códigos Morse com espaços.
+- **1. Buscar Código Morse**: O usuário digita um código Morse (usando "." e "-") e recebe o caractere correspondente. Para buscar várias letras, é necessário separar os códigos Morse com espaços.
 - **2. Exibir Árvore Morse**: Exibe toda a estrutura da árvore com os códigos Morse e seus caracteres.
 - **3. Sair**: Encerra o programa.
 
