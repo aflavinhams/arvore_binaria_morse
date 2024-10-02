@@ -72,9 +72,6 @@ Ao iniciar a árvore, os seguintes códigos Morse estão mapeados:
 | ----.        | 9         |
 | -----        | 0         |
 
-## Requisitos
-- **Java**: O projeto foi feito em Java, então você vai precisar do Java instalado no seu sistema para rodar o código.
-
 ## Como Rodar
 
 1. Faça o download ou clone o repositório.
